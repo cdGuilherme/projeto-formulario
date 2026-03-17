@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Projeto Formulário</title>
+  </head>
+  <body>
+    <main>
+      <h1>Projeto Formulário</h1>
+      <hr />
+    </main>
+
+    <section>
+      <h2>Calculadora JS</h2>
+      <label for="numero1">Número 1: </label> <br />
+      <input type="text" name="numero1" id="numero1" />
+      <br />
+      <label for="numero2">Número 2: </label> <br />
+      <input type="text" name="numero2" id="numero2" />
+      <br />
+      <div id="botoesCalculadora">
+        <input type="button" value="Somar" onclick="somar()" />
+        <input type="button" value="Subtrair" onclick="subtrair()" />
+        <input type="button" value="Multiplicar" onclick="multiplicar()" />
+        <input type="button" value="Dividir" onclick="dividir()" />
+        <input type="button" value="Exponenciação" onclick="exponenciacao()" />
+        <input type="button" value="Raiz" onclick="raiz()" />
+      </div>
+      <br />
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 1:</h2>
+      <p>
+        Faça um site que por meio de uma caixa de entrada receba o salário de um
+        funcionário e o percentual de aumento, calcule o novo salário e o mostre
+        por meio de um elemento parágrafo.
+      </p>
+      <label for="salario">Salário: </label> <br />
+      <input type="text" name="salario" id="salario" />
+      <br />
+      <label for="aumento">Aumento: </label> <br />
+      <input type="text" name="aumento" id="aumento" />
+      <label for="aumento">%</label>
+      <br />
+      <input type="button" value="Calcular" onclick="calcularSalario()" />
+      <br />
+      <p id="novoSalario">O novo salário irá aparecer aqui.</p>
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 2:</h2>
+      <p>
+        Faça o cálculo da área de um triângulo. Sabe-se que: <br />
+        a. Área = (Base * Altura) / 2 <br />
+        As entradas serão caixas de texto e o resultado deve ser mostrado por
+        meio de uma caixa de texto com o atributo de somente leitura
+      </p>
+      <label for="base">Base: </label> <br />
+      <input type="text" name="base" id="base" />
+      <br />
+      <label for="altura">Altura: </label> <br />
+      <input type="text" name="altura" id="altura" />
+      <br />
+      <input type="button" value="Calcular" onclick="areaTriangulo()" />
+      <br />
+      <br />
+      <label for="areaTriangulo">Resultado: </label> <br />
+      <input type="text" name="areaTriangulo" id="areaTriangulo" readonly />
+      <br />
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 3:</h2>
+      <p>
+        Receba duas notas e calcule a média ponderada (notas com peso
+        diferente). A primeira nota vale 30% e a segunda 70%. Mostre por meio de
+        um elemento label.
+      </p>
+      <label for="nota1">Nota 1:</label> <br />
+      <input type="text" name="nota1" id="nota1" />
+      <br />
+      <label for="nota2">Nota 2:</label> <br />
+      <input type="text" name="nota2" id="nota2" />
+      <br />
+      <input type="button" value="Calcular" onclick="calcNota()" />
+      <br />
+      <label id="resultadoNota">O resultado da nota irá aparecer aqui.</label>
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 4:</h2>
+      <p>
+        Receba o ano de nascimento. Calcule e mostre quantos: anos, meses, dias,
+        horas, minutos e semanas ele tem aproximadamente. Calcule também quantos
+        anos ele terá em 2050. Os resultados devem ser mostrados no Console.
+      </p>
+      <input type="text" name="anoNascimento" id="anoNascimento" />
+      <input type="button" value="Enviar" onclick="calcularIdade()" />
+      <p>
+        Obs: Os resultados vão ser exibidos em um alert no lugar do console para
+        melhor visualização
+      </p>
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 5:</h2>
+      <p>
+        Calcule o consumo médio de gasolina de um tanque de automóvel. Peça para
+        o usuário entrar com a distância (km) e o volume (litros). O consumo
+        médio é calculado por meio da fórmula Cm = d (km) / v (litros). Mostre
+        da forma que quiser.
+      </p>
+      <label for="distancia">Distância (km): </label> <br />
+      <input type="text" name="distancia" id="distancia" />
+      <br />
+      <label for="distancia">Volume (litros): </label> <br />
+      <input type="text" name="volume" id="volume" />
+      <br />
+      <input
+        type="button"
+        value="Calcular consumo médio"
+        onclick="calcConsumoMedio()"
+      />
+      <br />
+      <p id="resultadoConsumoMedio">
+        O consumo médio de gasolina irá aparecer aqui.
+      </p>
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 6:</h2>
+      <p>
+        A empresa RAB paga os empregados por hora trabalhada. Para as primeiras
+        40 horas, eles recebem normalmente. Após ultrapassar este limite (40
+        horas) o valor pago por hora passa a ser três vezes maior. Na folha de
+        pagamento é descontado R$ 1,50 para cada refeição. Calcule e mostre o
+        salário bruto, o valor do desconto da refeição e o salário líquido de um
+        funcionário que trabalhou 62 horas.
+      </p>
+      <label for="valorHora">Digite o valor em R$ por hora trabalhada: </label>
+      <br />
+      <input type="text" name="valorHora" id="valorHora" />
+      <label for="valorHora">R$</label>
+      <br />
+      <label for="qtdRefeicoes">Digite a quantidade de refeições: </label>
+      <br />
+      <input type="text" name="qtdRefeicoes" id="qtdRefeicoes" />
+      <br />
+      <input type="button" value="Calcular salário" onclick="calcSalario()" />
+      <br />
+      <hr />
+    </section>
+
+    <section>
+      <h2>Atividade 7:</h2>
+      <p>
+        Faça aparecer um número randômico e mostre a mensagem se é par ou impar.
+        <br />
+        Obs: o número aleatório vai ser gerado entre 0 a 100
+      </p>
+      <input
+        type="button"
+        value="Gerar número aleatorio"
+        onclick="numeroAleatorio()"
+      />
+      <br />
+    </section>
+
+    <script src="calculadora.js"></script>
+    <script src="atividade1.js"></script>
+    <script src="atividade2.js"></script>
+    <script src="atividade3.js"></script>
+    <script src="atividade4.js"></script>
+    <script src="atividade5.js"></script>
+    <script src="atividade6.js"></script>
+    <script src="atividade7.js"></script>
+  </body>
+</html>
